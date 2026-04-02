@@ -39,6 +39,29 @@ function searchUrl(query) {
   return `#/search/${encodeURIComponent(query)}`;
 }
 
+function quickSearchLabel(item) {
+  return typeof item === "string" ? item : item.label;
+}
+
+function quickSearchHref(item) {
+  if (typeof item === "string") {
+    return searchUrl(item);
+  }
+
+  if (item.page) {
+    return pageUrl(item.page);
+  }
+
+  return searchUrl(item.query || item.label);
+}
+
+function renderQuickSearchButton(item) {
+  const label = quickSearchLabel(item);
+  const href = quickSearchHref(item);
+
+  return `<a class="tag-button" href="${href}">${escapeHtml(label)}</a>`;
+}
+
 function createButton(cta, variant = "button-primary") {
   if (!cta) {
     return "";
@@ -152,10 +175,7 @@ function renderHome() {
         </form>
         <div class="search-suggestions">
           ${content.quickSearches
-            .map(
-              (query) =>
-                `<button class="tag-button" type="button" data-search-tag="${escapeHtml(query)}">${escapeHtml(query)}</button>`,
-            )
+            .map(renderQuickSearchButton)
             .join("")}
         </div>
       </div>
@@ -201,10 +221,7 @@ function renderHome() {
       <div class="search-suggestions">
         ${content.quickSearches
           .slice(0, 6)
-          .map(
-            (query) =>
-              `<button class="tag-button" type="button" data-search-tag="${escapeHtml(query)}">${escapeHtml(query)}</button>`,
-          )
+          .map(renderQuickSearchButton)
           .join("")}
       </div>
     </section>
@@ -487,7 +504,6 @@ function renderRoute() {
 
 function bindSearch() {
   const form = document.querySelector("[data-search-form]");
-  const tagButtons = [...document.querySelectorAll("[data-search-tag]")];
 
   if (form) {
     form.addEventListener("submit", (event) => {
@@ -502,16 +518,6 @@ function bindSearch() {
       window.location.hash = searchUrl(query);
     });
   }
-
-  tagButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const query = button.getAttribute("data-search-tag");
-
-      if (query) {
-        window.location.hash = searchUrl(query);
-      }
-    });
-  });
 }
 
 window.addEventListener("hashchange", renderRoute);
