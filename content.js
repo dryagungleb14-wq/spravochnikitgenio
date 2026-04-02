@@ -1245,7 +1245,7 @@ window.parentHelpHubContent = {
       ],
       whenToContactUs: ["Если не понимаете, какой формат у ребёнка сейчас."],
       primaryCta: {
-        label: "Вопрос по расписанию",
+        label: "Открыть раздел Расписание",
         type: "category",
         value: "schedule",
       },
