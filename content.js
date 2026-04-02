@@ -87,13 +87,6 @@ window.parentHelpHubContent = {
     { label: "не открывается кабинет", page: "progress/access-issue" },
     { label: "как оплатить", page: "payment/how-to-pay" },
     { label: "как работает отработка", page: "schedule/makeup" },
-    { label: "самостоятельное управление расписанием", page: "schedule/student-self-management" },
-    { label: "как войти в кабинет родителя", page: "schedule/parent-login" },
-    { label: "как войти в кабинет ученика", page: "schedule/student-login" },
-    { label: "как восстановить пароль", page: "schedule/reset-password" },
-    { label: "как записаться на занятия", page: "schedule/book-lesson" },
-    { label: "как добавить еще одного ученика", page: "schedule/add-student" },
-    { label: "как подготовиться к первому занятию", page: "tech/first-lesson-prep" },
   ],
   pages: [
     {
