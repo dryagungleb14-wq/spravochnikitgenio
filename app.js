@@ -263,10 +263,6 @@ function renderArticle(page) {
             ${createButton(page.secondaryCta, "button-secondary")}
           </div>
         </div>
-        <div class="article-section">
-          <h2>Источник истины</h2>
-          ${renderSourceList(page.sourceOfTruth)}
-        </div>
         ${
           relatedPages.length
             ? `
