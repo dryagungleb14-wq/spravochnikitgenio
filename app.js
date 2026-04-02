@@ -120,7 +120,9 @@ function renderBreadcrumbs(items) {
 function renderHome() {
   const featuredPages = [
     "schedule/cancel-lesson",
+    "schedule/parent-login",
     "schedule/makeup",
+    "schedule/book-lesson",
     "progress/homework-and-feedback",
     "tech/lesson-or-platform-issue",
   ]
@@ -135,7 +137,7 @@ function renderHome() {
         Здесь не нужно читать длинный справочник. Выберите свою ситуацию — и получите короткий ответ, понятный следующий шаг и момент, когда уже стоит подключать человека.
       </p>
       <div class="hero-actions">
-        <a class="button button-primary" href="#/schedule">Перейти к расписанию</a>
+        <a class="button button-primary" href="#/schedule">Вопрос по расписанию</a>
       </div>
       <div class="search-panel">
         <form class="search-form" data-search-form>
@@ -162,9 +164,23 @@ function renderHome() {
     <section class="section-block">
       <div class="section-header">
         <div>
-          <h2 class="section-title">Сценарии по жизненным ситуациям</h2>
+          <h2 class="section-title">С чего обычно начинают</h2>
           <p class="section-copy">
-            Вместо тем и регламентов — вход по тому, что действительно волнует родителя в моменте.
+            Здесь самые частые входы — расписание, доступ, запись, домашка и технические вопросы.
+          </p>
+        </div>
+      </div>
+      <div class="card-grid">
+        ${featuredPages.map(renderQuestionCard).join("")}
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Разделы по ситуациям</h2>
+          <p class="section-copy">
+            Если вопрос шире одного сценария — откройте нужный раздел и выберите свой кейс внутри.
           </p>
         </div>
       </div>
@@ -182,8 +198,14 @@ function renderHome() {
           </p>
         </div>
       </div>
-      <div class="card-grid">
-        ${featuredPages.map(renderQuestionCard).join("")}
+      <div class="search-suggestions">
+        ${content.quickSearches
+          .slice(0, 6)
+          .map(
+            (query) =>
+              `<button class="tag-button" type="button" data-search-tag="${escapeHtml(query)}">${escapeHtml(query)}</button>`,
+          )
+          .join("")}
       </div>
     </section>
 
@@ -382,9 +404,9 @@ function renderContact() {
     ])}
     <section class="hero">
       <div class="eyebrow">Контакты</div>
-      <h1>Если self-service не помог — пишите нам</h1>
+      <h1>Если нужен человек — вот короткий путь</h1>
       <p class="hero-copy">
-        Если обращаетесь в новый для вас мессенджер, лучше сразу укажите телефон или email, который использовали при регистрации. Так команде будет проще быстрее найти вашу семью и помочь без лишних уточнений.
+        Если пишете впервые в новый для вас канал, сразу укажите телефон или email, которые использовали при регистрации. Так мы быстрее найдём вашу семью и поможем без лишних уточнений.
       </p>
     </section>
     <section class="section-block">
