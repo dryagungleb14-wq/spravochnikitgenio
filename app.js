@@ -136,7 +136,6 @@ function renderHome() {
       </p>
       <div class="hero-actions">
         <a class="button button-primary" href="#/schedule">Перейти к расписанию</a>
-        <a class="button button-secondary" href="#/contact">Связаться с нами</a>
       </div>
       <div class="search-panel">
         <form class="search-form" data-search-form>

@@ -79,13 +79,6 @@ window.parentHelpHubContent = {
       href: "mailto:itgenik@itgen.io",
       type: "external",
     },
-    {
-      title: "Телефон",
-      description: "Если нужен звонок — для RU доступен отдельный номер школы.",
-      actionLabel: "Позвонить",
-      href: "tel:88007772059",
-      type: "external",
-    },
   ],
   quickSearches: [
     "как отменить урок",
