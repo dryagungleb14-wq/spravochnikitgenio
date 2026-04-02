@@ -826,7 +826,7 @@ window.parentHelpHubContent = {
         value: "contact",
       },
       secondaryCta: {
-        label: "Вернуться к расписанию",
+        label: "Открыть раздел Расписание",
         type: "category",
         value: "schedule",
       },
@@ -942,7 +942,7 @@ window.parentHelpHubContent = {
         value: "contact",
       },
       secondaryCta: {
-        label: "Вернуться к оплате",
+        label: "Открыть раздел Оплата",
         type: "category",
         value: "payment",
       },
