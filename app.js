@@ -260,6 +260,9 @@ function renderArticle(page) {
   const relatedPages = (page.relatedPages || [])
     .map((slug) => pageMap.get(slug))
     .filter(Boolean);
+  const whatHappensTitle = page.whatHappensTitle || "Что произойдёт";
+  const whatToDoNowTitle = page.whatToDoNowTitle || "Что сделать сейчас";
+  const whenToContactUsTitle = page.whenToContactUsTitle || "Когда уже нужен человек";
 
   app.innerHTML = `
     ${renderBreadcrumbs([
@@ -280,15 +283,15 @@ function renderArticle(page) {
     <section class="article-grid">
       <div class="article-main">
         <article class="article-section">
-          <h2>Что произойдёт</h2>
+          <h2>${escapeHtml(whatHappensTitle)}</h2>
           ${renderList(page.whatHappens)}
         </article>
         <article class="article-section">
-          <h2>Что сделать сейчас</h2>
+          <h2>${escapeHtml(whatToDoNowTitle)}</h2>
           ${renderList(page.whatToDoNow)}
         </article>
         <article class="article-section">
-          <h2>Когда уже нужен человек</h2>
+          <h2>${escapeHtml(whenToContactUsTitle)}</h2>
           ${renderList(page.whenToContactUs)}
         </article>
       </div>

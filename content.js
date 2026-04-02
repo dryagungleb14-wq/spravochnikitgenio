@@ -22,6 +22,19 @@ window.parentHelpHubContent = {
       featuredPages: ["payment/balance-and-payments", "payment/how-to-pay"],
     },
     {
+      id: "directions",
+      title: "Направления",
+      description:
+        "Короткие описания популярных направлений — чтобы быстро понять, что подойдёт ребёнку по интересу, возрасту и формату занятий.",
+      icon: "🧭",
+      featuredPages: [
+        "directions/python",
+        "directions/roblox",
+        "directions/minecraft",
+        "directions/scratch",
+      ],
+    },
+    {
       id: "progress",
       title: "Прогресс и домашка",
       description:
@@ -89,6 +102,282 @@ window.parentHelpHubContent = {
     { label: "как работает отработка", page: "schedule/makeup" },
   ],
   pages: [
+    {
+      slug: "directions/python",
+      category: "directions",
+      title: "Python",
+      shortTitle: "Python",
+      question: "Что за направление Python",
+      answer:
+        "Python — это первое серьёзное программирование для детей, которым уже хочется не только играть, но и писать настоящий код. Направление хорошо подходит тем, кто любит логику, задачи и хочет перейти от простых проектов к более взрослой разработке.",
+      whatHappensTitle: "Кому подходит",
+      whatToDoNowTitle: "Что делает ребёнок",
+      whenToContactUsTitle: "Что будет дальше",
+      whatHappens: [
+        "Обычно подходит детям от 10 лет.",
+        "Можно стартовать без опыта в программировании.",
+        "Особенно хорошо заходит тем, кому нравятся задачи, алгоритмы и создание своих программ.",
+      ],
+      whatToDoNow: [
+        "Пишет первые программы на реальном языке программирования.",
+        "Делает игры, интерфейсы и небольшие полезные проекты.",
+        "Учится мыслить как программист — через условия, циклы, функции и структуру кода.",
+      ],
+      whenToContactUs: [
+        "После Python можно идти в веб-разработку, Pygame или нейросети.",
+        "Это хороший путь для ребёнка, который хочет расти в сторону более взрослого программирования.",
+      ],
+      primaryCta: {
+        label: "Как записаться на занятия",
+        type: "page",
+        value: "schedule/book-lesson",
+      },
+      secondaryCta: {
+        label: "Написать нам",
+        type: "contact",
+        value: "contact",
+      },
+      relatedPages: ["directions/scratch", "directions/unity", "schedule/book-lesson"],
+      searchAliases: [
+        "python",
+        "питон",
+        "направление python",
+        "курс python",
+      ],
+      sourceOfTruth: [
+        "adminAI/adminai/adminai/core/pipelines/rag/indexer/resources/course_cards/python.md",
+      ],
+    },
+    {
+      slug: "directions/roblox",
+      category: "directions",
+      title: "Roblox",
+      shortTitle: "Roblox",
+      question: "Что за направление Roblox",
+      answer:
+        "Roblox — это направление для детей, которым нравится не просто играть, а создавать свои 3D-миры, карты и игровые механики. Оно хорошо работает как вход в геймдев через знакомую и очень мотивирующую среду.",
+      whatHappensTitle: "Кому подходит",
+      whatToDoNowTitle: "Что делает ребёнок",
+      whenToContactUsTitle: "Что будет дальше",
+      whatHappens: [
+        "Обычно подходит детям от 8 лет.",
+        "Можно начинать без опыта в программировании.",
+        "Особенно хорошо подходит тем, кто любит игры, творчество и хочет делать свои проекты в Roblox.",
+      ],
+      whatToDoNow: [
+        "Создаёт карты и игровые миры в Roblox Studio.",
+        "Осваивает игровую логику и первые скрипты на Lua.",
+        "Собирает свои механики, мини-игры и публикует готовые проекты.",
+      ],
+      whenToContactUs: [
+        "После Roblox можно расти в Unity, Unreal Engine или Python + Pygame.",
+        "Это сильный старт для ребёнка, которому ближе геймдев и проектное обучение.",
+      ],
+      primaryCta: {
+        label: "Как записаться на занятия",
+        type: "page",
+        value: "schedule/book-lesson",
+      },
+      secondaryCta: {
+        label: "Написать нам",
+        type: "contact",
+        value: "contact",
+      },
+      relatedPages: ["directions/minecraft", "directions/unity", "schedule/book-lesson"],
+      searchAliases: [
+        "roblox",
+        "роблокс",
+        "направление roblox",
+        "курс roblox",
+      ],
+      sourceOfTruth: [
+        "adminAI/adminai/adminai/core/pipelines/rag/indexer/resources/course_cards/roblox.md",
+      ],
+    },
+    {
+      slug: "directions/minecraft",
+      category: "directions",
+      title: "Minecraft",
+      shortTitle: "Minecraft",
+      question: "Что за направление Minecraft",
+      answer:
+        "Minecraft — это вход в программирование через знакомую игровую среду, где ребёнок учится управлять действиями в мире игры с помощью алгоритмов и команд. Направление хорошо подходит тем, кому важна быстрая визуальная отдача и интересный игровой контекст.",
+      whatHappensTitle: "Кому подходит",
+      whatToDoNowTitle: "Что делает ребёнок",
+      whenToContactUsTitle: "Что будет дальше",
+      whatHappens: [
+        "Обычно подходит детям от 9 лет, иногда можно стартовать с 8 по согласованию.",
+        "Не требует опыта в программировании.",
+        "Особенно хорошо подходит тем, кто любит Minecraft и хочет перейти от игры к созданию логики внутри неё.",
+      ],
+      whatToDoNow: [
+        "Работает с командными блоками и простыми алгоритмами.",
+        "Управляет роботами и автоматизирует постройки внутри Minecraft Education Edition.",
+        "Создаёт большие миры и интерактивные проекты с помощью кода.",
+      ],
+      whenToContactUs: [
+        "После Minecraft можно идти в Roblox, GameMaker или блочный Python.",
+        "Это хороший мягкий старт в логику и алгоритмическое мышление для ребёнка, которому важен игровой формат.",
+      ],
+      primaryCta: {
+        label: "Как записаться на занятия",
+        type: "page",
+        value: "schedule/book-lesson",
+      },
+      secondaryCta: {
+        label: "Написать нам",
+        type: "contact",
+        value: "contact",
+      },
+      relatedPages: ["directions/roblox", "directions/scratch", "schedule/book-lesson"],
+      searchAliases: [
+        "minecraft",
+        "майнкрафт",
+        "программирование в minecraft",
+        "курс minecraft",
+      ],
+      sourceOfTruth: [
+        "adminAI/adminai/adminai/core/pipelines/rag/indexer/resources/course_cards/minecraft.md",
+      ],
+    },
+    {
+      slug: "directions/scratch",
+      category: "directions",
+      title: "Scratch",
+      shortTitle: "Scratch",
+      question: "Что за направление Scratch",
+      answer:
+        "Scratch — это мягкий и понятный старт в программирование для младших детей. Здесь ребёнок собирает логику из визуальных блоков и довольно быстро начинает делать свои игры, анимации и интерактивные истории.",
+      whatHappensTitle: "Кому подходит",
+      whatToDoNowTitle: "Что делает ребёнок",
+      whenToContactUsTitle: "Что будет дальше",
+      whatHappens: [
+        "Обычно подходит детям 7–12 лет.",
+        "Не требует никакого опыта и хорошо подходит для самого первого старта.",
+        "Особенно полезен тем, кому важно войти в программирование спокойно, без сложного синтаксиса.",
+      ],
+      whatToDoNow: [
+        "Собирает игры, анимации и истории из визуальных блоков.",
+        "Осваивает логику, последовательности, условия и переменные.",
+        "Делает десятки собственных проектов и постепенно готовится к переходу в более взрослый код.",
+      ],
+      whenToContactUs: [
+        "После Scratch можно переходить в Python, Roblox, Minecraft или GameMaker.",
+        "Это один из лучших первых шагов, если ребёнок ещё только присматривается к программированию.",
+      ],
+      primaryCta: {
+        label: "Как записаться на занятия",
+        type: "page",
+        value: "schedule/book-lesson",
+      },
+      secondaryCta: {
+        label: "Написать нам",
+        type: "contact",
+        value: "contact",
+      },
+      relatedPages: ["directions/python", "directions/minecraft", "schedule/book-lesson"],
+      searchAliases: [
+        "scratch",
+        "скретч",
+        "направление scratch",
+        "курс scratch",
+      ],
+      sourceOfTruth: [
+        "adminAI/adminai/adminai/core/pipelines/rag/indexer/resources/course_cards/scratch.md",
+      ],
+    },
+    {
+      slug: "directions/unity",
+      category: "directions",
+      title: "Unity",
+      shortTitle: "Unity",
+      question: "Что за направление Unity",
+      answer:
+        "Unity — это уже более взрослый вход в геймдев, где ребёнок создаёт свои 2D и 3D-игры в профессиональной среде. Направление подходит тем, кто хочет не просто пробовать, а глубже зайти в разработку игр и начать писать код на C#.",
+      whatHappensTitle: "Кому подходит",
+      whatToDoNowTitle: "Что делает ребёнок",
+      whenToContactUsTitle: "Что будет дальше",
+      whatHappens: [
+        "Обычно подходит детям от 10 лет.",
+        "Можно стартовать без опыта, но интерес к играм и проектной работе очень помогает.",
+        "Важно, чтобы для занятий был достаточно мощный компьютер.",
+      ],
+      whatToDoNow: [
+        "Создаёт свои 2D и 3D-игры в Unity.",
+        "Изучает основы C# и связывает код с игровой механикой.",
+        "Делает мини-игры, уровни, анимации и в итоге собирает полноценный игровой проект.",
+      ],
+      whenToContactUs: [
+        "После Unity ребёнок уже может идти в более серьёзные собственные игровые проекты и глубже в C#.",
+        "Это хорошее направление для тех, кто хочет попробовать себя в настоящей разработке игр, а не только в игровых песочницах.",
+      ],
+      primaryCta: {
+        label: "Как записаться на занятия",
+        type: "page",
+        value: "schedule/book-lesson",
+      },
+      secondaryCta: {
+        label: "Написать нам",
+        type: "contact",
+        value: "contact",
+      },
+      relatedPages: ["directions/roblox", "directions/python", "schedule/book-lesson"],
+      searchAliases: [
+        "unity",
+        "юнити",
+        "направление unity",
+        "курс unity",
+      ],
+      sourceOfTruth: [
+        "adminAI/adminai/adminai/core/pipelines/rag/indexer/resources/course_cards/unity.md",
+      ],
+    },
+    {
+      slug: "directions/web-design",
+      category: "directions",
+      title: "Веб-дизайн",
+      shortTitle: "Веб-дизайн",
+      question: "Что за направление Веб-дизайн",
+      answer:
+        "Веб-дизайн — это направление для подростков, которым ближе визуальное творчество, интерфейсы и работа в Figma. Здесь ребёнок не программирует сайты, а учится придумывать, собирать и оформлять понятные цифровые продукты.",
+      whatHappensTitle: "Кому подходит",
+      whatToDoNowTitle: "Что делает ребёнок",
+      whenToContactUsTitle: "Что будет дальше",
+      whatHappens: [
+        "Обычно подходит детям от 11 лет.",
+        "Можно начинать с нуля, без опыта в дизайне.",
+        "Особенно хорошо подходит тем, кому интересны интерфейсы, визуал, композиция и работа с идеями.",
+      ],
+      whatToDoNow: [
+        "Осваивает Figma и основы визуального дизайна.",
+        "Собирает баннеры, карточки, макеты сайтов и интерфейсы приложений.",
+        "Учится работать с композицией, цветом, типографикой и делает своё портфолио.",
+      ],
+      whenToContactUs: [
+        "После веб-дизайна можно идти в графический дизайн, motion design или веб-разработку.",
+        "Это хороший путь для ребёнка, которому ближе креативная digital-сфера, а не программирование как первое направление.",
+      ],
+      primaryCta: {
+        label: "Как записаться на занятия",
+        type: "page",
+        value: "schedule/book-lesson",
+      },
+      secondaryCta: {
+        label: "Написать нам",
+        type: "contact",
+        value: "contact",
+      },
+      relatedPages: ["directions/python", "directions/scratch", "schedule/book-lesson"],
+      searchAliases: [
+        "веб дизайн",
+        "веб-дизайн",
+        "web design",
+        "figma",
+      ],
+      sourceOfTruth: [
+        "adminAI/adminai/adminai/core/pipelines/rag/indexer/resources/course_cards/web_dizayn.md",
+      ],
+    },
     {
       slug: "schedule/cancel-lesson",
       category: "schedule",
