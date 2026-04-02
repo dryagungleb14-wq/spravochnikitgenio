@@ -94,6 +94,7 @@ window.parentHelpHubContent = {
     "не открывается кабинет",
     "как оплатить",
     "как работает отработка",
+    "самостоятельное управление расписанием",
   ],
   pages: [
     {
@@ -341,6 +342,47 @@ window.parentHelpHubContent = {
         "adminAI/adminai/adminai/core/pipelines/rag/indexer/resources/general/schedule_policy.md",
         "adminAI/adminai/adminai/core/pipelines/rag/indexer/resources/general/lessons_formats.md",
       ],
+    },
+    {
+      slug: "schedule/student-self-management",
+      category: "schedule",
+      title: "Как включить самостоятельное управление расписанием у ученика",
+      shortTitle: "Самостоятельное управление",
+      question: "Как включить самостоятельное управление расписанием у ученика",
+      answer:
+        "По умолчанию в кабинете ученика управление расписанием выключено. Чтобы ученик мог сам записываться, отменять и переносить занятия, эту опцию нужно включить в родительском кабинете или попросить Айтигеника помочь.",
+      whatHappens: [
+        "После включения ученик сможет сам записываться на занятия.",
+        "Станут доступны отмена, перенос и запись на отработку.",
+        "Также в кабинете ученика появятся добавление расписания в календарь, работа с бронью и просмотр профиля тренера.",
+      ],
+      whatToDoNow: [
+        "Откройте настройки родительского кабинета.",
+        "Включите переключатель «Самостоятельное управление расписанием».",
+        "Если удобнее — напишите Айтигенику и попросите включить эту опцию.",
+      ],
+      whenToContactUs: [
+        "Если не видите нужный переключатель в кабинете.",
+        "Если не уверены, стоит ли включать самостоятельное управление именно вашему ребёнку.",
+      ],
+      primaryCta: {
+        label: "Открыть настройки родительского кабинета",
+        type: "external",
+        value: "https://portal.itgen.io/familyProfileSettings?tab=parentAccount",
+      },
+      secondaryCta: {
+        label: "Написать нам",
+        type: "contact",
+        value: "contact",
+      },
+      relatedPages: ["schedule/reschedule", "schedule/cancel-lesson", "schedule/makeup"],
+      searchAliases: [
+        "самостоятельное управление расписанием",
+        "ученик сам управляет расписанием",
+        "включить управление расписанием у ученика",
+        "кабинет ученика расписание",
+      ],
+      sourceOfTruth: ["https://itgen.io/help-ru#independent_management"],
     },
     {
       slug: "payment/balance-and-payments",
