@@ -530,6 +530,13 @@ input {
   grid-column: auto;
 }
 
+.article-side .question-card .card-copy {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
 .article-section {
   padding: 26px;
   border: 1px solid var(--stroke);
