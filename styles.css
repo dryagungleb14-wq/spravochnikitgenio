@@ -522,6 +522,14 @@ input {
   gap: 22px;
 }
 
+.article-side .card-grid {
+  grid-template-columns: 1fr;
+}
+
+.article-side .card-grid > * {
+  grid-column: auto;
+}
+
 .article-section {
   padding: 26px;
   border: 1px solid var(--stroke);
