@@ -276,6 +276,15 @@ function renderHome() {
 
 function renderCategory(category) {
   const pages = content.pages.filter((page) => page.category === category.id);
+  const shortcutPages = (category.shortcutPages || [])
+    .map((slug) => pageMap.get(slug))
+    .filter(Boolean);
+  const primaryCategoryCta = category.primaryCta
+    ? createButton(category.primaryCta, "button-primary")
+    : '<a class="button button-primary" href="#/contact">Написать нам</a>';
+  const secondaryCategoryCta = category.secondaryCta
+    ? createButton(category.secondaryCta, "button-secondary")
+    : '<a class="button button-secondary" href="#/">На главную</a>';
 
   app.innerHTML = `
     ${renderBreadcrumbs([
@@ -287,11 +296,41 @@ function renderCategory(category) {
       <h1>${escapeHtml(category.title)}</h1>
       <p class="hero-copy">${escapeHtml(category.description)}</p>
       <div class="hero-actions">
-        <a class="button button-primary" href="#/contact">Написать нам</a>
-        <a class="button button-secondary" href="#/">На главную</a>
+        ${primaryCategoryCta}
+        ${secondaryCategoryCta}
       </div>
     </section>
+    ${
+      shortcutPages.length
+        ? `
+          <section class="section-block shortcut-block">
+            <div class="section-header">
+              <div>
+                <h2 class="section-title">${escapeHtml(category.shortcutTitle || "С чего начать")}</h2>
+                <p class="section-copy">${escapeHtml(
+                  category.shortcutCopy || "Выберите самый похожий сценарий и начните с него.",
+                )}</p>
+              </div>
+            </div>
+            <div class="card-grid">
+              ${shortcutPages.map(renderQuestionCard).join("")}
+            </div>
+          </section>
+        `
+        : ""
+    }
     <section class="section-block">
+      ${
+        shortcutPages.length
+          ? `
+            <div class="section-header">
+              <div>
+                <h2 class="section-title">Все сценарии раздела</h2>
+              </div>
+            </div>
+          `
+          : ""
+      }
       <div class="card-grid">
         ${pages.map(renderQuestionCard).join("")}
       </div>

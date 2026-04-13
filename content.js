@@ -50,9 +50,33 @@ window.parentHelpHubContent = {
       id: "tech",
       title: "Техническая помощь",
       description:
-        "Что быстро проверить самим перед уроком и в какой момент уже лучше сразу идти в поддержку.",
+        "Сначала выберите, что именно не работает — звук, подключение, демонстрация экрана или устройство. Так ответ находится быстрее, чем через общий список правил.",
       icon: "🛠️",
-      featuredPages: ["tech/lesson-or-platform-issue", "tech/lesson-requirements"],
+      featuredPages: [
+        "tech/audio-video-issue",
+        "tech/connection-issue",
+        "tech/screen-share-issue",
+        "tech/phone-or-tablet",
+      ],
+      primaryCta: {
+        label: "Проверить звук и видео",
+        type: "external",
+        value: "https://portal.itgen.io/vc-settings",
+      },
+      secondaryCta: {
+        label: "Написать нам",
+        type: "contact",
+        value: "contact",
+      },
+      shortcutTitle: "Что именно не работает",
+      shortcutCopy:
+        "Это самые частые техпроблемы. Откройте самый похожий сценарий — и сразу увидите, что проверить самим и когда уже стоит писать нам.",
+      shortcutPages: [
+        "tech/audio-video-issue",
+        "tech/connection-issue",
+        "tech/screen-share-issue",
+        "tech/phone-or-tablet",
+      ],
     },
     {
       id: "formats",
@@ -1427,6 +1451,215 @@ window.parentHelpHubContent = {
       ],
     },
     {
+      slug: "tech/audio-video-issue",
+      category: "tech",
+      title: "Не работает звук, микрофон или камера",
+      shortTitle: "Звук, микрофон или камера",
+      question: "Что делать, если не работает звук, микрофон или камера",
+      answer:
+        "Чаще всего проблема решается на странице проверки связи — там сразу видно, какой микрофон, динамики и камера выбраны и дал ли браузер доступ к устройствам.",
+      whatHappens: [
+        "Звук и видео чаще всего ломаются из-за неправильного устройства в настройках или из-за запрета в браузере.",
+        "Если проверить это до урока, проблему обычно можно убрать за пару минут.",
+        "Если устройство не определяется совсем, дальше уже лучше не тратить время и сразу писать нам.",
+      ],
+      whatToDoNow: [
+        "Откройте проверку связи и проверьте, что выбраны нужные микрофон, динамики и камера.",
+        "Если браузер просит доступ к микрофону или камере, разрешите его.",
+        "Закройте лишние вкладки и программы, которые могут держать камеру или микрофон занятыми.",
+        "После этого перезагрузите страницу урока и зайдите снова.",
+      ],
+      visualGuide: [
+        {
+          src: "assets/help-media/chat-settings-ru.png",
+          alt: "Проверка звука и видео в кабинете",
+          caption: "На странице проверки связи можно сразу проверить микрофон, динамики, камеру и разрешения браузера.",
+        },
+      ],
+      whenToContactUs: [
+        "Если в настройках не появляется нужное устройство.",
+        "Если микрофон, камера или звук не работают даже после проверки связи.",
+        "Если до урока осталось мало времени и проблема не уходит сразу.",
+      ],
+      primaryCta: {
+        label: "Проверить звук и видео",
+        type: "external",
+        value: "https://portal.itgen.io/vc-settings",
+      },
+      secondaryCta: {
+        label: "Написать нам",
+        type: "contact",
+        value: "contact",
+      },
+      relatedPages: ["tech/connection-issue", "tech/screen-share-issue", "tech/lesson-or-platform-issue"],
+      searchAliases: [
+        "не работает микрофон",
+        "не работает камера",
+        "нет звука",
+        "не слышно",
+        "не работает видео",
+      ],
+      sourceOfTruth: [
+        "adminAI/adminai/adminai/core/pipelines/rag/indexer/resources/general/system_requirements.md",
+        "https://itgen.io/help-ru#connection_check",
+      ],
+    },
+    {
+      slug: "tech/connection-issue",
+      category: "tech",
+      title: "Не получается подключиться к уроку",
+      shortTitle: "Не получается подключиться",
+      question: "Что делать, если не получается подключиться к уроку",
+      answer:
+        "Сначала проверьте самый короткий путь: зайдите в урок из расписания, откройте его в нормальном браузере и выключите VPN, если он включён. Это закрывает большую часть проблем с подключением.",
+      whatHappens: [
+        "Проблема с подключением часто связана не с самим уроком, а с браузером, VPN или способом входа.",
+        "Если зайти в урок из расписания и пройти базовую проверку, часто всё начинает работать сразу.",
+        "Если подключение всё равно не идёт, лучше быстро позвать тренера или написать нам.",
+      ],
+      whatToDoNow: [
+        "Откройте расписание в кабинете ученика или родителя и нажмите «Подключиться» у нужного занятия.",
+        "Проверьте, что урок открыт в Google Chrome или другом браузере на базе Chromium.",
+        "Если у вас включён VPN, отключите его и попробуйте подключиться снова.",
+        "Обновите страницу и ещё раз зайдите в урок из расписания.",
+      ],
+      visualGuide: [
+        {
+          src: "assets/help-media/join-chat-from-schedule-ru.png",
+          alt: "Подключение к занятию из расписания",
+          caption: "Самый надёжный путь в урок — открыть расписание и нажать «Подключиться» у нужного занятия.",
+        },
+        {
+          src: "assets/help-media/call-trainer-ru.png",
+          alt: "Кнопка позвать тренера в уроке",
+          caption: "Если урок уже открыт, но что-то пошло не так, можно быстро нажать «Позвать тренера».",
+        },
+      ],
+      whenToContactUs: [
+        "Если урок не открывается даже после повторного входа из расписания.",
+        "Если после отключения VPN и обновления страницы проблема осталась.",
+        "Если до урока осталось мало времени и подключение не работает.",
+      ],
+      primaryCta: {
+        label: "Открыть кабинет",
+        type: "external",
+        value: "https://portal.itgen.io/",
+      },
+      secondaryCta: {
+        label: "Написать нам",
+        type: "contact",
+        value: "contact",
+      },
+      relatedPages: ["tech/audio-video-issue", "tech/lesson-or-platform-issue", "progress/access-issue"],
+      searchAliases: [
+        "не получается подключиться",
+        "не подключается урок",
+        "не заходит в урок",
+        "vpn",
+        "проблемы со связью",
+      ],
+      sourceOfTruth: [
+        "adminAI/adminai/adminai/core/pipelines/rag/indexer/resources/general/system_requirements.md",
+      ],
+    },
+    {
+      slug: "tech/screen-share-issue",
+      category: "tech",
+      title: "Не работает демонстрация экрана",
+      shortTitle: "Не работает демонстрация",
+      question: "Что делать, если не работает демонстрация экрана",
+      answer:
+        "Обычно проблема в разрешении браузера или в том, что открыто слишком много вкладок. Сначала проверьте именно это — чаще всего дальше ничего сложного не нужно.",
+      whatHappens: [
+        "Без разрешения браузера демонстрация экрана не включится.",
+        "Иногда мешают лишние вкладки или повторно открытый урок.",
+        "Если браузер не даёт показать экран даже после повторной попытки, уже нужен человек.",
+      ],
+      whatToDoNow: [
+        "Оставьте открытым только один урок и закройте лишние вкладки браузера.",
+        "При включении демонстрации разрешите браузеру показ экрана, если он этого просит.",
+        "Попробуйте ещё раз выбрать вкладку, окно или весь экран для показа.",
+        "Если не помогло, обновите урок и повторите попытку.",
+      ],
+      visualGuide: [
+        {
+          src: "assets/help-media/chat-settings-ru.png",
+          alt: "Проверка браузера и доступа в видеочате",
+          caption: "В настройках видеочата можно быстро понять, не мешает ли браузер и все ли разрешения открыты.",
+        },
+      ],
+      whenToContactUs: [
+        "Если браузер вообще не предлагает включить демонстрацию экрана.",
+        "Если после обновления урока и повторной попытки показ экрана не включается.",
+        "Если демонстрация нужна срочно для текущего урока, а время уже идёт.",
+      ],
+      primaryCta: {
+        label: "Написать нам",
+        type: "contact",
+        value: "contact",
+      },
+      secondaryCta: {
+        label: "Проверить звук и видео",
+        type: "external",
+        value: "https://portal.itgen.io/vc-settings",
+      },
+      relatedPages: ["tech/connection-issue", "tech/audio-video-issue", "tech/lesson-or-platform-issue"],
+      searchAliases: [
+        "не работает демонстрация экрана",
+        "не показывает экран",
+        "не могу включить демонстрацию",
+        "не шарится экран",
+      ],
+      sourceOfTruth: [
+        "adminAI/adminai/adminai/core/pipelines/rag/indexer/resources/general/system_requirements.md",
+      ],
+    },
+    {
+      slug: "tech/phone-or-tablet",
+      category: "tech",
+      title: "Почему не подходит телефон или планшет",
+      shortTitle: "Телефон или планшет",
+      question: "Почему для урока не подходят телефон или планшет",
+      answer:
+        "Для обычного урока нужен компьютер или ноутбук. На телефоне и планшете чаще всего ломаются важные вещи — вход в урок, работа с проектами, демонстрация экрана и нормальная навигация по кабинету.",
+      whatHappens: [
+        "На телефоне и планшете часть урока может просто не открываться как надо.",
+        "Даже если войти получается, дальше обычно возникают проблемы с проектами, файлами и интерфейсом урока.",
+        "Поэтому лучше сразу пересесть на компьютер или ноутбук, а не пытаться чинить всё на мобильном устройстве.",
+      ],
+      whatToDoNow: [
+        "Откройте кабинет с компьютера или ноутбука.",
+        "Подготовьте мышку, наушники и микрофон до урока.",
+        "После входа сразу откройте проверку связи и убедитесь, что всё работает.",
+      ],
+      whenToContactUs: [
+        "Если у вас сейчас нет доступа к компьютеру или ноутбуку.",
+        "Если не понимаете, подойдёт ли ваше устройство для конкретного направления.",
+      ],
+      primaryCta: {
+        label: "Как подготовиться к первому занятию",
+        type: "page",
+        value: "tech/first-lesson-prep",
+      },
+      secondaryCta: {
+        label: "Написать нам",
+        type: "contact",
+        value: "contact",
+      },
+      relatedPages: ["tech/lesson-requirements", "tech/first-lesson-prep", "tech/connection-issue"],
+      searchAliases: [
+        "планшет",
+        "телефон",
+        "можно ли с телефона",
+        "можно ли с планшета",
+        "не подходит устройство",
+      ],
+      sourceOfTruth: [
+        "adminAI/adminai/adminai/core/pipelines/rag/indexer/resources/general/system_requirements.md",
+        "https://itgen.io/help-ru#for_lessons_you_need",
+      ],
+    },
+    {
       slug: "tech/lesson-or-platform-issue",
       category: "tech",
       title: "Не работает урок или платформа",
@@ -1477,7 +1710,7 @@ window.parentHelpHubContent = {
         type: "page",
         value: "tech/lesson-requirements",
       },
-      relatedPages: ["progress/access-issue", "tech/lesson-requirements"],
+      relatedPages: ["tech/audio-video-issue", "tech/connection-issue", "tech/screen-share-issue"],
       searchAliases: [
         "не работает урок",
         "не заходит на урок",
@@ -1546,7 +1779,7 @@ window.parentHelpHubContent = {
         type: "page",
         value: "schedule/student-login",
       },
-      relatedPages: ["schedule/student-login", "tech/lesson-requirements", "tech/lesson-or-platform-issue"],
+      relatedPages: ["tech/audio-video-issue", "tech/connection-issue", "tech/lesson-requirements"],
       searchAliases: [
         "первое занятие",
         "подготовка к первому занятию",
@@ -1592,7 +1825,7 @@ window.parentHelpHubContent = {
         type: "contact",
         value: "contact",
       },
-      relatedPages: ["formats/lesson-duration"],
+      relatedPages: ["tech/phone-or-tablet", "tech/first-lesson-prep", "tech/audio-video-issue"],
       searchAliases: [
         "что нужно для урока",
         "техника для занятий",
