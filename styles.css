@@ -593,6 +593,32 @@ input {
   font-size: 0.84rem;
 }
 
+.visual-guide {
+  display: grid;
+  gap: 16px;
+}
+
+.visual-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--stroke);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.visual-card-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #f7fbff;
+}
+
+.visual-card-caption {
+  padding: 14px 16px 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
 .search-result-count {
   margin-top: 8px;
   color: var(--text-muted);

@@ -92,6 +92,30 @@ function renderList(items) {
     .join("")}</ul>`;
 }
 
+function renderVisualGuide(items) {
+  if (!items || !items.length) {
+    return "";
+  }
+
+  return `
+    <article class="article-section">
+      <h2>Как это выглядит</h2>
+      <div class="visual-guide">
+        ${items
+          .map(
+            (item) => `
+              <figure class="visual-card">
+                <img class="visual-card-image" src="${item.src}" alt="${escapeHtml(item.alt)}" loading="lazy" />
+                <figcaption class="visual-card-caption">${escapeHtml(item.caption)}</figcaption>
+              </figure>
+            `,
+          )
+          .join("")}
+      </div>
+    </article>
+  `;
+}
+
 function renderSourceList(items) {
   return `<div class="source-list">${items
     .map((item) => `<span class="source-badge">${escapeHtml(item)}</span>`)
@@ -290,6 +314,7 @@ function renderArticle(page) {
           <h2>${escapeHtml(whatToDoNowTitle)}</h2>
           ${renderList(page.whatToDoNow)}
         </article>
+        ${renderVisualGuide(page.visualGuide)}
         <article class="article-section">
           <h2>${escapeHtml(whenToContactUsTitle)}</h2>
           ${renderList(page.whenToContactUs)}
