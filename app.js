@@ -116,6 +116,26 @@ function renderVisualGuide(items) {
   `;
 }
 
+function renderFocusBanner(banner) {
+  if (!banner) {
+    return "";
+  }
+
+  return `
+    <section class="focus-banner">
+      <div class="focus-banner-copy">
+        ${banner.eyebrow ? `<div class="focus-banner-eyebrow">${escapeHtml(banner.eyebrow)}</div>` : ""}
+        <h2>${escapeHtml(banner.title)}</h2>
+        <p>${escapeHtml(banner.copy)}</p>
+      </div>
+      <div class="focus-banner-actions">
+        ${createButton(banner.primaryCta, "button-primary")}
+        ${createButton(banner.secondaryCta, "button-secondary")}
+      </div>
+    </section>
+  `;
+}
+
 function renderSourceList(items) {
   return `<div class="source-list">${items
     .map((item) => `<span class="source-badge">${escapeHtml(item)}</span>`)
@@ -303,6 +323,8 @@ function renderArticle(page) {
         ${createButton(page.secondaryCta, "button-secondary")}
       </div>
     </section>
+
+    ${renderFocusBanner(page.focusBanner)}
 
     <section class="article-grid">
       <div class="article-main">

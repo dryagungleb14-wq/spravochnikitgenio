@@ -516,6 +516,58 @@ input {
   gap: 22px;
 }
 
+.focus-banner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) auto;
+  gap: 18px;
+  align-items: center;
+  margin: 22px 0;
+  padding: 28px 30px;
+  border: 1px solid rgba(45, 124, 255, 0.16);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at top right, rgba(45, 124, 255, 0.16), transparent 28%),
+    linear-gradient(135deg, #eaf3ff 0%, #dcecff 100%);
+  box-shadow: var(--shadow);
+}
+
+.focus-banner-copy h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.focus-banner-copy p {
+  margin: 12px 0 0;
+  max-width: 760px;
+  color: var(--text-soft);
+  font-size: 1.04rem;
+  line-height: 1.65;
+}
+
+.focus-banner-eyebrow {
+  display: inline-flex;
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: var(--accent-strong);
+  background: rgba(255, 255, 255, 0.62);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.focus-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
 .article-main,
 .article-side {
   display: grid;
@@ -659,6 +711,14 @@ input {
 
   .article-grid {
     grid-template-columns: 1fr;
+  }
+
+  .focus-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .focus-banner-actions {
+    justify-content: start;
   }
 }
 
