@@ -225,6 +225,8 @@ function renderHome() {
       </div>
     </section>
 
+    ${renderFocusBanner(content.homeFocusBanner)}
+
     <section class="section-block">
       <div class="section-header">
         <div>
